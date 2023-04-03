@@ -1,0 +1,1 @@
+function img=getimagej;import ij.*;prog=ij.IJ.getInstance;imp = WindowManager.getCurrentImage;stack=imp.getStack;nx = imp.getWidth;ny = imp.getHeight;nz = imp.getStackSize;img = zeros(ny, nx, nz);for k = 1: nz,    pixels = stack.getProcessor(k).getPixels;    slice = reshape(pixels,nx,ny);    img(:,:,k) = double(slice');end
