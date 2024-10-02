@@ -3,6 +3,10 @@
 // Project:     MIJ: Matlab to ImageJ interface
 // URL:			http://bigwww.epfl.ch/sage/soft/mij/
 //
+// Version 1.4.0 (Daniel Sage, September 2024)
+// - Licensing on GNU GPLv3
+// - github: https://github.com/dasv74/mij
+//
 // Version 1.3.9 (Daniel Sage, March 2013)
 // - Add public methods: error, log, getLog, selectWindow, closeAllWindows, setSlice, ...
 //
@@ -79,49 +83,44 @@ import java.util.StringTokenizer;
 /**
  * Matlab to ImageJ interface.
  * 
- * @version 1.3.9 (17 March 2014).
+ * @version 1.4.0 (27 September 2024).
  * 
  * @author <ul type="square">
  *         <li>Daniel Sage, Biomedical Imaging Group, EPFL, Switzerland.</li>
  *         <li>Dimiter Prodanov, Imec, Leuven, Belgium.</li>
  *         <li>Carlos Ortiz, North Carolina State University, Chapell Hill, USA.</li>
- *         <li>Jean-Yves Tinevez, Imagopole, Institut Pasteur, Paris, France.</li>
- *         <li>Abby Fox, Independant Consultant, Lausanne, Switzerland.</li>
- *         <li>Vitaly Ablavsky, Computer Vision Lab, EPFL, Switzerland.</li>
+ *         <li>Jean-Yves Tinevez, Institut Pasteur, Paris, France.</li>
  *         </ul>
  * 
- * 
  * @see <p>
- *      <b>More information:</b> <a
- *      href="http://bigwww.epfl.ch/sage/soft/mij/">http
- *      ://bigwww.epfl.ch/sage/soft/mij/</a>
+ *      <b>More information:</b> 
+ *      <a href="https://bigwww.epfl.ch/sage/soft/mij/">
+ *      https://bigwww.epfl.ch/sage/soft/mij/</a>
  *      </p>
+ *      <p>
+ *     	<b>Reference:</b>
+ *      Reference: D. Sage, D. Prodanov, J.-Y. Tinevez and J. Schindelin, MIJ: Making Interoperability Between ImageJ and Matlab Possible ImageJ User & Developer Conference, 2012, Luxembourg
  *      <b>Important note for the installation:</b><br>
- *      <p>
- *      To use this class, copy mij.jar to your ImageJ folder and tell Matlab
- *      where the files are by:<br>
- *      javaaddpath '<IJpath>\ij.jar'<br>
- *      javaaddpath '<IJpath>\mij.jar'<br>
  *      </p>
  *      <p>
- *      <b>This class was tested:</b>
- *      <ul type="square">
- *      <li>Matlab 7.10.0 (R2010a) on Ubuntu.</li>
- *      <li>Matlab 7.11.0 (R2010b) on Mac OX 10.6.5.</li>
- *      </ul>
- *      <p>
- *      <b>Conditions of use:</b><br>
- *      You'll be free to use this software for research purposes, but you
- *      should not redistribute it without our consent. In addition, we expect
- *      you to include a citation or acknowledgment whenever you present or
- *      publish results that are based on it.
+ *      To use this class, copy mij.jar and ij.jar into java/jar of the local copy of Matlab.
+ *      Set the Java path using Matlab commands:<br>
+ *      > javaaddpath '<IJpath>\ij.jar'<br>
+ *      > javaaddpath '<IJpath>\mij.jar'<br>
  *      </p>
+ *      <p>
+ *      <b>Tested:</b> This class was tested on Matlab R2023b on MacOSX 14.6 and many others versions of Matlab.
+ *      </p>
+ *      <p>
+ *      <b>License</b> GNU General Public License v3.0<br>
+ *      https://www.gnu.org/licenses/why-not-lgpl.html
+ *      
  */
 
 public class MIJ {
 
 	public static ImageJ imagej;
-	private static final String version = "1.3.9";
+	private static final String version = "1.4.0";
 	private static final int CAL = 1;
 	private static final int NOCAL = 0;
 	private static boolean verbose = true;

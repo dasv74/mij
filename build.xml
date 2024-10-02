@@ -1,0 +1,15 @@
+<project name="mij" default="main">
+	<property name="matlab" location="/Applications/MATLAB_R2023b.app/java/jar/" />
+	<target name="main" description="Main target">
+		<copy file="lib/ij.jar" toDir="${matlab}" />
+		<echo>Building the ${ant.project.name}.jar file.</echo>
+		<jar jarfile="${ant.project.name}.jar">
+			<fileset dir="." includes="plugins.config" />
+			<fileset dir="bin" includes="**/*.*" />
+		</jar>
+		<echo>Copying the ${ant.project.name}.jar file into ${matlab}.</echo>
+		<copy file="${ant.project.name}.jar" toDir="${matlab}" />
+	</target>
+</project>
+
+

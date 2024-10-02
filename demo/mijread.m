@@ -22,7 +22,7 @@ function image = mijread(filename)
 %
 % Installation:
 % 1. Put the ij.jar (ImageJ) in the folder java of Matlab
-% 2. Put the MIJ.class (MIJ) in the folder java of Matlab
+% 2. Put the mij.jar (MIJ) in the folder java of Matlab
 %
 opener = ij.io.Opener();
 if isjava(opener) == 0
